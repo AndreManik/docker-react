@@ -6,4 +6,4 @@ before_install:
     - docker build -t manik/docker-react -f Dockerfile.dev .
     
 script:
-    - docker run CI=true manik/docker-react npm run test -- --coverage
+    - docker run -e CI=true manik/docker-react npm run test -- --coverage
